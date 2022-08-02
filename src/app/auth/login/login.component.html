@@ -1,0 +1,19 @@
+<form class="container" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput formControlName="login" placeholder="Login" autofocus />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      formControlName="password"
+      placeholder="Hasło"
+      type="password"
+    />
+  </mat-form-field>
+  <div>
+    <button mat-raised-button color="primary" [disabled]="loginForm.invalid">
+      Zaloguj
+    </button>
+  </div>
+</form>
